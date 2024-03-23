@@ -1,5 +1,4 @@
-#Remove VSFlashOff, replace with VSFlashOn, redraw display
+#set VIDAS.Config VSCFlash to 1, redraw display
 
-tag @e[tag=VSGlobalSettings] remove VSFlashOff
-tag @e[tag=VSGlobalSettings] add VSFlashOn
+scoreboard players set VIDAS.Config VSCFlash 1
 function vidas5:ui/loadscreen/config/main

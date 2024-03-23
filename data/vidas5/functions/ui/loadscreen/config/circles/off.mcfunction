@@ -1,5 +1,4 @@
-#Remove VSCirclesOn, replace with VSCirclesOff, redraw display
+#Set VIDAS.Config VSCCircles to 0
 
-tag @e[tag=VSGlobalSettings] remove VSCirclesOn
-tag @e[tag=VSGlobalSettings] add VSCirclesOff
+scoreboard players set VIDAS.Config VSCCircles 0
 function vidas5:ui/loadscreen/config/main

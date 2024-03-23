@@ -1,20 +1,6 @@
-#Determine current tag, replace with previous, redraw screen
+#Determine current tag, replace with next, redraw screen
 
-#Add new tag
-
-tag @e[tag=VSGlobalSettings, tag=VSXPAll] add VSXPWrapUp
-tag @e[tag=VSGlobalSettings, tag=VSXPFlash] add VSXPAll
-tag @e[tag=VSGlobalSettings, tag=VSXPCirc] add VSXPFlash
-tag @e[tag=VSGlobalSettings, tag=VSXPNone] add VSXPCirc
-
-#Wrap Prevention
-tag @e[tag=VSGlobalSettings, tag=VSXPWrapUp] add VSXPNone
-
-tag @e[tag=VSGlobalSettings, tag=VSXPNone] remove VSXPAll
-tag @e[tag=VSGlobalSettings, tag=VSXPCirc] remove VSXPNone
-tag @e[tag=VSGlobalSettings, tag=VSXPFlash] remove VSXPCirc
-tag @e[tag=VSGlobalSettings, tag=VSXPAll] remove VSXPFlash
-
-tag @e[tag=VSGlobalSettings] remove VSXPWrapUp
+scoreboard players add VIDAS.Config VSCXP 1
+execute if score VIDAS.Config VSCXP matches 4 run scoreboard players set VIDAS.Config VSCXP 0
 
 function vidas5:ui/loadscreen/config/main
