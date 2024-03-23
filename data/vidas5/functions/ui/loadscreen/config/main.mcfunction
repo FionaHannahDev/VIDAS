@@ -13,8 +13,8 @@ function vidas5:ui/loadscreen/config/flash/enabledisable
 #Teleport Uses XP
 function vidas5:ui/loadscreen/config/xp/current
 
-#Teleport uses XP
-
+#Hub Location Config
+function vidas5:ui/loadscreen/config/hublocation/current
 
 #Config Exit
 tellraw @a[tag=VSConfiging] ["",{"text":"    > ","italic":true,"color":"#BDCD72"},{"text":"[Exit]","color":"dark_red","clickEvent":{"action":"run_command","value":"/tag @s remove VSConfiging"},"hoverEvent":{"action":"show_text","contents":["If you get spammed while an admin is working on commands, click here"]}}]

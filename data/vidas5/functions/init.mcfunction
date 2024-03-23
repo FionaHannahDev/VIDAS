@@ -6,13 +6,18 @@ scoreboard objectives add VStick dummy
 scoreboard objectives add VSCCircles dummy 
 scoreboard objectives add VSCFlash dummy
 scoreboard objectives add VSCXP dummy
+scoreboard objectives add VSChubX dummy
+scoreboard objectives add VSChubY dummy
+scoreboard objectives add VSChubZ dummy
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
 execute unless score VIDAS.Config VSCFlash = VIDAS.Config VSCFlash run scoreboard players set VIDAS.Config VSCFlash 1
 execute unless score VIDAS.Config VSCXP = VIDAS.Config VSCXP run scoreboard players set VIDAS.Config VSCXP 0 
 
-#Central Portal Location Marker
+execute unless score VIDAS.Config VSChubX = VIDAS.Config VSChubX run scoreboard players set VIDAS.Config VSChubX 0
+execute unless score VIDAS.Config VSChubY = VIDAS.Config VSChubY run scoreboard players set VIDAS.Config VSChubY 0
+execute unless score VIDAS.Config VSChubZ = VIDAS.Config VSChubZ run scoreboard players set VIDAS.Config VSChubZ 0
 
 
 
