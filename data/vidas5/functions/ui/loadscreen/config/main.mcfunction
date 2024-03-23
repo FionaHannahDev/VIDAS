@@ -2,7 +2,7 @@
 tag @s add VSConfiging
 
 #Header Line
-tellraw @a[tag=VSConfiging] ["",{"text":"[","bold":true,"color":"dark_gray"},{"text":"VIDAS ","bold":true,"italic":true,"color":"gray"},{"text":"-","italic":true,"color":"dark_gray"},{"text":" Configuration","bold":true,"italic":true,"color":"gray"},{"text":"]","bold":true,"color":"dark_gray"}]
+tellraw @a[tag=VSConfiging] ["",{"text":"-------------------------------------------------","color":"gray"},"\n","/////                                                           \\\\\\\\\\","\n",{"text":"              [","bold":true,"color":"dark_gray"},{"text":"VIDAS ","bold":true,"italic":true,"color":"gray"},{"text":"-","italic":true,"color":"dark_gray"},{"text":" Configuration","bold":true,"italic":true,"color":"gray"},{"text":"]","bold":true,"color":"dark_gray"}]
 
 #Circles on / off
 function vidas5:ui/loadscreen/config/circles/enabledisable
@@ -13,8 +13,22 @@ function vidas5:ui/loadscreen/config/flash/enabledisable
 #Teleport Uses XP
 function vidas5:ui/loadscreen/config/xp/current
 
+#Category Break
+tellraw @a[tag=VSConfiging] ["","\n"]
+tellraw @a[tag=VSConfiging] ["","\n"]
+
 #Hub Location Config
 function vidas5:ui/loadscreen/config/hublocation/current
+
+#Config Location Config
+function vidas5:ui/loadscreen/config/configlocation/current
+
+#Coordinate Dimension Config
+function vidas5:ui/loadscreen/config/dimension/current
+
+#Break Line
+tellraw @a[tag=VSConfiging] ["","\n","\n","\n","\n","\n"]
+
 
 #Config Exit
 tellraw @a[tag=VSConfiging] ["",{"text":"    > ","italic":true,"color":"#BDCD72"},{"text":"[Exit]","color":"dark_red","clickEvent":{"action":"run_command","value":"/tag @s remove VSConfiging"},"hoverEvent":{"action":"show_text","contents":["If you get spammed while an admin is working on commands, click here"]}}]
