@@ -1,0 +1,9 @@
+#Drain over time opts
+tellraw @s ["",{"text":"    >","italic":true,"color":"#BDCD72"},{"text":" Cost Type","color":"#5690CF","hoverEvent":{"action":"show_text","contents":["How is the XP cost extracted from the player?"]}}," :       ",{"text":"[<<]","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/config/xpmoredetails/draintype/down"},"hoverEvent":{"action":"show_text","contents":["Previous Option"]}},{"text":"[Over Time]","color":"#B88DD3","hoverEvent":{"action":"show_text","contents":["The XP will be drained as the specified amount per tick"]}},{"text":"[>>]","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/config/xpmoredetails/draintype/up"},"hoverEvent":{"action":"show_text","contents":["Next Option"]}}]
+
+tellraw @a[tag=VSConfiging] " "
+
+#Show config options for Tick
+tellraw @s ["",{"text":"    >","italic":true,"color":"#BDCD72"},{"text":" Teleport XP Drain","color":"#5690CF","hoverEvent":{"action":"show_text","contents":["How much XP is taken from the moment they stand on teleport each tick?"]}}," :       ",{"text":"[<<] ","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/config/xpmoredetails/draintype/bothopts/tickdown"},"hoverEvent":{"action":"show_text","contents":["Less XP"]}},{"score":{"name":"VIDAS.Config","objective":"VSCXPCosttick"},"color":"blue","hoverEvent":{"action":"show_text","contents":["The amount of XP that teleporting will drain per tick"]}},{"text":" [>>]","bold":true,"color":"white","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/config/xpmoredetails/draintype/bothopts/tickup"},"hoverEvent":{"action":"show_text","contents":["Next Option"]}}]
+
+tellraw @a[tag=VSConfiging] " "

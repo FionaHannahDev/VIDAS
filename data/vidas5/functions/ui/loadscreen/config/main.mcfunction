@@ -25,7 +25,7 @@ function vidas5:ui/loadscreen/config/configlocation/current
 function vidas5:ui/loadscreen/config/dimension/current
 
 #Break Line
-tellraw @a[tag=VSConfiging] ["","\n","\n","\n","\n","\n"]
+tellraw @a[tag=VSConfiging] ["","\n","\n","\n","\n","\n","\n","\n"]
 
 
 #Config Exit
