@@ -13,6 +13,11 @@ scoreboard objectives add VSCconfigX dummy
 scoreboard objectives add VSCconfigY dummy
 scoreboard objectives add VSCconfigZ dummy
 scoreboard objectives add VSCdim dummy
+scoreboard objectives add VSCXPType dummy
+scoreboard objectives add VSCXPSeperate dummy
+scoreboard objectives add VSCXPCost dummy
+scoreboard objectives add VSCXPCost2 dummy
+
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
@@ -29,6 +34,12 @@ execute unless score VIDAS.Config VSCconfigZ = VIDAS.Config VSCconfigZ run score
 
 execute unless score VIDAS.Config VSCdim = VIDAS.Config VSCdim run scoreboard players set VIDAS.Config VSCdim 0
 
+#Extra options
+#XP
+execute unless score VIDAS.Config VSCXPType = VIDAS.Config VSCXPType run scoreboard players set VIDAS.Config VSCXPType 0
+execute unless score VIDAS.Config VSCXPSeperate = VIDAS.Config VSCXPSeperate run scoreboard players set VIDAS.Config VSCXPSeperate 0
+execute unless score VIDAS.Config VSCXPCost = VIDAS.Config VSCXPCost run scoreboard players set VIDAS.Config VSCXPCost 0
+execute unless score VIDAS.Config VSCXPCost2 = VIDAS.Config VSCXPCost2 run scoreboard players set VIDAS.Config VSCXPCost2 0
 
 
 #VIDAS bootup announcement

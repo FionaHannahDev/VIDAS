@@ -15,8 +15,6 @@ function vidas5:ui/loadscreen/config/xp/current
 
 #Category Break
 tellraw @a[tag=VSConfiging] ["","\n"]
-tellraw @a[tag=VSConfiging] ["","\n"]
-
 #Hub Location Config
 function vidas5:ui/loadscreen/config/hublocation/current
 

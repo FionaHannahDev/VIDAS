@@ -2,9 +2,9 @@
 
 #Teleport within dimension
 execute as @s at @s if score VIDAS.Config VSCdim matches 0 if dimension overworld run tag @s add VSIntra
-execute as @s at @s if score VIDAS.Config VSCdim matches 2 if dimension the_nether run tag @s add VSIntra
-execute as @s at @s if score VIDAS.Config VSCdim matches 3 if dimension the_end run tag @s add VSIntra
-execute as @s at @s if score VIDAS.Config VSCdim matches 4 if dimension versavia:yggdrasil run tag @s add VSIntra
+execute as @s at @s if score VIDAS.Config VSCdim matches 1 if dimension the_nether run tag @s add VSIntra
+execute as @s at @s if score VIDAS.Config VSCdim matches 2 if dimension the_end run tag @s add VSIntra
+execute as @s at @s if score VIDAS.Config VSCdim matches 3 if dimension versavia:yggdrasil run tag @s add VSIntra
 
 #If they have the intra tag, execute intradimensional TP.
 #If they do not, interdimentional that TP. 
