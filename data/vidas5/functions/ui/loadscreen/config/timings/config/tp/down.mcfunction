@@ -23,5 +23,9 @@ execute if score VIDAS.Config VSCTtest <= VIDAS.Config VSCTLockout run scoreboar
 #Ensure that VIDAS.Config VSCTTP is floored to next highest
 execute if score VIDAS.Config VSCTTP <= VIDAS.Config VSCTtest run function vidas5:ui/loadscreen/config/timings/config/tp/floor
 
+#Adjust VSCTPAbsolute
+scoreboard players set VIDAS.Config VSCTPAbsolute 5
+scoreboard players operation VIDAS.Config VSCTPAbsolute += VIDAS.Config VSCTTP
+
 #redraw
 function vidas5:ui/loadscreen/config/timings/config/main

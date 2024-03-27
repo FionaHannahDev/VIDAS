@@ -9,8 +9,12 @@ execute as @s at @s if score VIDAS.Config VSCdim matches 3 if dimension versavia
 #If they have the intra tag, execute intradimensional TP.
 #If they do not, interdimentional that TP. 
 
-execute as @s[tag=VSIntra] at @s run function vidas5:base/teleports/types/tohub/intra
-execute as @s[tag=!VSIntra] at @s run function vidas5:base/teleports/types/tohub/inter
+
+#TODO: FIX THIS BUG. Intra has bugs. Its important to distinguish these two right now because they might function differently
+#But for now, only use inter
+#execute as @s[tag=VSIntra] at @s run function vidas5:base/teleports/types/tohub/intra
+#execute as @s[tag=!VSIntra] at @s run function vidas5:base/teleports/types/tohub/inter
+execute as @s at @s run function vidas5:base/teleports/types/tohub/inter
 
 #removes intra tag
 tag @s remove VSIntra

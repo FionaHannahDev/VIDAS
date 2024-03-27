@@ -23,6 +23,8 @@ scoreboard objectives add VSCXPCosttick2 dummy
 #Timings
 #Teleport
 scoreboard objectives add VSCTTP dummy
+#TP Absolute - this is a hidden variable and is configured through VSCTTP. It is always 5 ticks higher
+scoreboard objectives add VSCTPAbsolute dummy
 #Lockout
 scoreboard objectives add VSCTLockout dummy
 #Counts - set to -1. Only show [+] if another row is required
@@ -68,6 +70,7 @@ execute unless score VIDAS.Config VSCXPCosttick2 = VIDAS.Config VSCXPCosttick2 r
 
 #Timing. The below is the default config. -1 means not used. 
 execute unless score VIDAS.Config VSCTTP = VIDAS.Config VSCTTP run scoreboard players set VIDAS.Config VSCTTP 140
+execute unless score VIDAS.Config VSCTTAbsolute = VIDAS.Config VSCTTAbsolute run scoreboard players set VIDAS.Config VSCTTAbsolute 145
 execute unless score VIDAS.Config VSCTLockout = VIDAS.Config VSCTLockout run scoreboard players set VIDAS.Config VSCTLockout 130
 execute unless score VIDAS.Config VSCT1 = VIDAS.Config VSCT1 run scoreboard players set VIDAS.Config VSCT1 40
 execute unless score VIDAS.Config VSCT2 = VIDAS.Config VSCT2 run scoreboard players set VIDAS.Config VSCT2 60
