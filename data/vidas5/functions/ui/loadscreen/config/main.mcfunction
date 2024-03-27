@@ -25,8 +25,12 @@ function vidas5:ui/loadscreen/config/configlocation/current
 function vidas5:ui/loadscreen/config/dimension/current
 
 #Break Line
-tellraw @a[tag=VSConfiging] ["","\n","\n","\n","\n","\n","\n","\n"]
+tellraw @a[tag=VSConfiging] ["","\n"]
 
+#Display VIDAS timings config
+function vidas5:ui/loadscreen/config/timings/configure
+
+tellraw @a[tag=VSConfiging] ["","\n","\n","\n","\n"]
 
 #Config Exit
 tellraw @a[tag=VSConfiging] ["",{"text":"    > ","italic":true,"color":"#BDCD72"},{"text":"[Exit]","color":"dark_red","clickEvent":{"action":"run_command","value":"/tag @s remove VSConfiging"},"hoverEvent":{"action":"show_text","contents":["If you get spammed while an admin is working on commands, click here"]}}]

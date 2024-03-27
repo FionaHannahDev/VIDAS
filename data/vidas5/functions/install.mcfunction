@@ -20,6 +20,27 @@ scoreboard objectives add VSCXPCost2 dummy
 scoreboard objectives add VSCXPCosttick dummy
 scoreboard objectives add VSCXPCosttick2 dummy
 
+#Timings
+#Teleport
+scoreboard objectives add VSCTTP dummy
+#Lockout
+scoreboard objectives add VSCTLockout dummy
+#Counts - set to -1. Only show [+] if another row is required
+scoreboard objectives add VSCT1 dummy
+scoreboard objectives add VSCT2 dummy
+scoreboard objectives add VSCT3 dummy
+scoreboard objectives add VSCT4 dummy
+scoreboard objectives add VSCT5 dummy
+scoreboard objectives add VSCT6 dummy
+scoreboard objectives add VSCT7 dummy
+scoreboard objectives add VSCT8 dummy
+scoreboard objectives add VSCT9 dummy
+scoreboard objectives add VSCT10 dummy
+#Initiate
+scoreboard objectives add VSCTInit dummy
+
+#This is a variable. It holds the validation data for the next highest tick
+scoreboard objectives add VSCTtest dummy
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
@@ -44,6 +65,21 @@ execute unless score VIDAS.Config VSCXPCost = VIDAS.Config VSCXPCost run scorebo
 execute unless score VIDAS.Config VSCXPCost2 = VIDAS.Config VSCXPCost2 run scoreboard players set VIDAS.Config VSCXPCost2 0
 execute unless score VIDAS.Config VSCXPCosttick = VIDAS.Config VSCXPCosttick run scoreboard players set VIDAS.Config VSCXPCosttick 0
 execute unless score VIDAS.Config VSCXPCosttick2 = VIDAS.Config VSCXPCosttick2 run scoreboard players set VIDAS.Config VSCXPCosttick2 0
+
+#Timing. The below is the default config. -1 means not used. 
+execute unless score VIDAS.Config VSCTTP = VIDAS.Config VSCTTP run scoreboard players set VIDAS.Config VSCTTP 140
+execute unless score VIDAS.Config VSCTLockout = VIDAS.Config VSCTLockout run scoreboard players set VIDAS.Config VSCTLockout 130
+execute unless score VIDAS.Config VSCT1 = VIDAS.Config VSCT1 run scoreboard players set VIDAS.Config VSCT1 40
+execute unless score VIDAS.Config VSCT2 = VIDAS.Config VSCT2 run scoreboard players set VIDAS.Config VSCT2 60
+execute unless score VIDAS.Config VSCT3 = VIDAS.Config VSCT3 run scoreboard players set VIDAS.Config VSCT3 80
+execute unless score VIDAS.Config VSCT4 = VIDAS.Config VSCT4 run scoreboard players set VIDAS.Config VSCT4 100
+execute unless score VIDAS.Config VSCT5 = VIDAS.Config VSCT5 run scoreboard players set VIDAS.Config VSCT5 120
+execute unless score VIDAS.Config VSCT6 = VIDAS.Config VSCT6 run scoreboard players set VIDAS.Config VSCT6 -1
+execute unless score VIDAS.Config VSCT7 = VIDAS.Config VSCT7 run scoreboard players set VIDAS.Config VSCT7 -1
+execute unless score VIDAS.Config VSCT8 = VIDAS.Config VSCT8 run scoreboard players set VIDAS.Config VSCT8 -1
+execute unless score VIDAS.Config VSCT9 = VIDAS.Config VSCT9 run scoreboard players set VIDAS.Config VSCT9 -1
+execute unless score VIDAS.Config VSCT10 = VIDAS.Config VSCT10 run scoreboard players set VIDAS.Config VSCT10 -1
+execute unless score VIDAS.Config VSCTInit = VIDAS.Config VSCTInit run scoreboard players set VIDAS.Config VSCTInit 1
 
 
 #VIDAS bootup announcement
