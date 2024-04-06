@@ -7,7 +7,7 @@
 execute if entity @s[tag=VSReady] run function vidas5:base/tick/tickup
 
 #Also perform tickup if VSReady is not present, but VSLockout is
-execute if entity @s[tag=!VSReady,tag=VSLockout] run function vidas5:base/tick/tickup
+execute if entity @s[tag=!VSReady,tag=VSLockin] run function vidas5:base/tick/tickup
 
 #but if we have ticks, but no VSReady, tick down. Do single check here, and if score, check tag. This limits the search population and means for the majority of the time, no further execution needed
 execute if score @s VStick matches 1.. run function vidas5:base/tick/tickdowncheck

@@ -43,6 +43,10 @@ scoreboard objectives add VSCTInit dummy
 
 #This is a variable. It holds the validation data for the next highest tick
 scoreboard objectives add VSCTtest dummy
+#This is a temp itterative which holds the XP drain and burst values for the player for the recursive XP function
+scoreboard objectives add VSTemp dummy
+#Holds XP value. Updates on check
+scoreboard objectives add VSPlayerXP dummy
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
