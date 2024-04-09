@@ -1,4 +1,4 @@
-tellraw @s {"text":"Initiation. ","color":"white"}
+tellraw @s[tag=VSDebug] {"text":"Initiation. ","color":"white"}
 
 #Init calls a fork
 #If VSFlash is on, adjust score and instead run LOCKOUT and FLASH events

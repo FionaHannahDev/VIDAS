@@ -1,5 +1,12 @@
 #DETERMINE TELEPORT TYPE
 
+#Pre Teleport function ending
+function vidas5:base/otherfunctions/configureanimations/circlesetup/end
+function vidas5:base/otherfunctions/presencecheck/outrange
+
+
+
+
 #Teleport within dimension
 execute as @s at @s if score VIDAS.Config VSCdim matches 0 if dimension overworld run tag @s add VSIntra
 execute as @s at @s if score VIDAS.Config VSCdim matches 1 if dimension the_nether run tag @s add VSIntra

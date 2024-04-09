@@ -1,6 +1,3 @@
-#Variable Initiation
-scoreboard objectives add VStick dummy
-
 #Config Variables
 #globalsettings binary for fakeplayer
 scoreboard objectives add VSCCircles dummy 
@@ -43,10 +40,9 @@ scoreboard objectives add VSCTInit dummy
 
 #This is a variable. It holds the validation data for the next highest tick
 scoreboard objectives add VSCTtest dummy
-#This is a temp itterative which holds the XP drain and burst values for the player for the recursive XP function
-scoreboard objectives add VSTemp dummy
-#Holds XP value. Updates on check
-scoreboard objectives add VSPlayerXP dummy
+#Rotation variable for the CFG animation tick
+scoreboard objectives add VSRotate dummy
+
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
@@ -88,6 +84,25 @@ execute unless score VIDAS.Config VSCT9 = VIDAS.Config VSCT9 run scoreboard play
 execute unless score VIDAS.Config VSCT10 = VIDAS.Config VSCT10 run scoreboard players set VIDAS.Config VSCT10 -1
 execute unless score VIDAS.Config VSCTInit = VIDAS.Config VSCTInit run scoreboard players set VIDAS.Config VSCTInit 1
 
+
+#Player Internal vars
+#Variable Initiation
+scoreboard objectives add VStick dummy
+#This is a temp itterative which holds the XP drain and burst values for the player for the recursive XP function
+scoreboard objectives add VSTemp dummy
+#Holds XP value. Updates on check
+scoreboard objectives add VSPlayerXP dummy
+#Crying Obsidian Placed
+scoreboard objectives add VSCryObsidPlaced minecraft.used:crying_obsidian
+#Configure Animation Tick
+scoreboard objectives add VSLocalCGFTick dummy
+
+
+
+#VERSION SIGNALING
+#VSLastVersion signals the version that they are on.
+#VSLastVersion 
+scoreboard objectives add VSLastVersion dummy
 
 #VIDAS bootup announcement
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"V","bold":true,"italic":true,"color":"gray"},{"text":"ersavian ","italic":true,"color":"dark_gray"},{"text":"I","bold":true,"italic":true,"color":"gray"},{"text":"nter ","italic":true,"color":"dark_gray"},{"text":"D","bold":true,"italic":true,"color":"gray"},{"text":"imentional ","italic":true,"color":"dark_gray"},{"text":"A","bold":true,"italic":true,"color":"gray"},{"text":"ccess ","italic":true,"color":"dark_gray"},{"text":"S","bold":true,"italic":true,"color":"gray"},{"text":"ystem","italic":true,"color":"dark_gray"},{"text":"]","color":"dark_gray"},"\n",{"text":"    Vidas is now ","italic":true,"color":"#A4C5D0"},{"text":"loaded.","italic":true,"color":"#6BD287"},"\n",{"text":"    Ready for Configuration.","italic":true,"color":"#A4C5D0"},"\n",{"text":"        >","italic":true,"color":"#BDCD72"},{"text":"... Configure VIDAS","italic":true,"underlined":true,"color":"#5672CF","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/config/main"}},"\n",{"text":"        >","italic":true,"color":"#BDCD72"},{"text":"... About VIDAS","italic":true,"underlined":true,"color":"#5672CF","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/about/main"}},"\n",{"text":"        >","italic":true,"color":"#BDCD72"},{"text":"... Credits","italic":true,"underlined":true,"color":"#5672CF","clickEvent":{"action":"run_command","value":"/function vidas5:ui/loadscreen/credits/main"},"hoverEvent":{"action":"show_text","contents":["Hello"]}}]

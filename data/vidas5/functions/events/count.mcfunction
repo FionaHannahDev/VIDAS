@@ -1,1 +1,1 @@
-tellraw @s {"text":"Count. ","color":"white"}
+tellraw @s[tag=VSDebug] {"text":"Count. ","color":"white"}

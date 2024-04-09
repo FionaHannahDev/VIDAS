@@ -1,1 +1,1 @@
-tellraw @s {"text":"Teleport. ","color":"white"}
+tellraw @s[tag=VSDebug] {"text":"Teleport. ","color":"white"}

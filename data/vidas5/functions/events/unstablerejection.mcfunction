@@ -5,7 +5,7 @@
 #This means that even though Xp drain is failing, a teleport would go ahead anyway
 #Unstable rejecting means that this does NOT happen, and gives you some customisation
 
-#UN SET LOCKIN, 
+tellraw @s[tag=VSDebug] {"text":"Unstable rejection.","color":"white"}
 
 
 #DO DAMAGE
