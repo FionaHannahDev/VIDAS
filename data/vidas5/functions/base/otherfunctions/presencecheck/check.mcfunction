@@ -8,3 +8,6 @@ execute if entity @a[tag=!VSNearby, distance=0..10] run function vidas5:base/oth
 
 #if player outside 10..20 blocks, and nearby tag, do outrange function and untag them
 execute if entity @a[tag=VSNearby, distance=10..20] run function vidas5:base/otherfunctions/presencecheck/outrange
+
+
+#KNOWN BUG WITH THIS. IF THERE ARE TWO CLOSE TOGETHER, THIS WILL FORCE A CONFLICT
