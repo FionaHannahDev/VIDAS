@@ -1,0 +1,10 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "VSCryObsidMined": {
+        "min": 1,
+        "max": 99999
+      }
+    }
+  }

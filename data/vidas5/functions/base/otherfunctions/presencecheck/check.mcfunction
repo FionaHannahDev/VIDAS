@@ -1,13 +1,14 @@
 #this checks the prescence of a player in the area of any marker entity with VSCircle as its tag
 
-#Inrange is so much closer than outrange to prevent any overlap in detection
+#Firstly, check the range
+#ONLY execute if CLOSEST PLAYER to @s is within 30 blocks
+execute if entity @p[distance=..30] run function vidas5:base/otherfunctions/presencecheck/distancecheck/getrange
 
-#Track player presence with tag VSNearby
-#If player within 10 blocks, and no nearby tag, do Inrange function and tag them with VSNearby
-execute if entity @a[tag=!VSNearby, distance=0..10] run function vidas5:base/otherfunctions/presencecheck/inrange
+#If that condition triggers, VSTracking is applied to marker with VSCircle.
+#If nearest player is outside this range, remove tracking marker
+execute as @s[tag=VSTracking] if entity @p[distance=30..] run tag @s remove VSTracking
 
-#if player outside 10..20 blocks, and nearby tag, do outrange function and untag them
-execute if entity @a[tag=VSNearby, distance=10..20] run function vidas5:base/otherfunctions/presencecheck/outrange
+#If VSCircle has VSTracking, apply VSNearby if VSDistance scoreboard value is under 10. 
+#Remove it if VSNearby is applied and VSDistance is above 20.
 
-
-#KNOWN BUG WITH THIS. IF THERE ARE TWO CLOSE TOGETHER, THIS WILL FORCE A CONFLICT
+function vidas5:base/otherfunctions/presencecheck/track

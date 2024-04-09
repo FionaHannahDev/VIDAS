@@ -6,4 +6,5 @@ playsound block.end_portal.spawn master @a[distance=0..10] ~ ~ ~ 1 1
 
 #Set animation tick to 200 to give 10 seconds of animation to the portal
 scoreboard players set @s VSLocalCGFTick 200
+tag @s add VSAnimReg
 execute as @e[type=marker,tag=VSCircle,distance=0..10] at @s run function vidas5:base/otherfunctions/configureanimations/circlesetup/init

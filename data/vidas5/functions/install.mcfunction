@@ -43,6 +43,21 @@ scoreboard objectives add VSCTtest dummy
 #Rotation variable for the CFG animation tick
 scoreboard objectives add VSRotate dummy
 
+#These are difference calculations based on XYZ of target nearestplayer and marker with VSCircle
+scoreboard objectives add VSX dummy
+scoreboard objectives add VSY dummy
+scoreboard objectives add VSZ dummy
+#Diff
+scoreboard objectives add VSDX dummy
+scoreboard objectives add VSDY dummy
+scoreboard objectives add VSDZ dummy
+#Sum dif
+scoreboard objectives add VSDsum dummy
+#SQRT estimations
+scoreboard objectives add VSSQRTI dummy
+scoreboard objectives add VSSQRTX dummy
+scoreboard objectives add VSDistance dummy
+
 
 #Set up fakeplayer with settings if they dont already exist
 execute unless score VIDAS.Config VSCCircles = VIDAS.Config VSCCircles run scoreboard players set VIDAS.Config VSCCircles 1
@@ -94,6 +109,8 @@ scoreboard objectives add VSTemp dummy
 scoreboard objectives add VSPlayerXP dummy
 #Crying Obsidian Placed
 scoreboard objectives add VSCryObsidPlaced minecraft.used:crying_obsidian
+#Crying Obsidian Mined
+scoreboard objectives add VSCryObsidMined minecraft.mined:crying_obsidian
 #Configure Animation Tick
 scoreboard objectives add VSLocalCGFTick dummy
 

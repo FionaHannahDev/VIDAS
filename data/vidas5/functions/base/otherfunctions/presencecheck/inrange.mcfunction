@@ -9,7 +9,7 @@ particle lava ~ ~1 ~3 0 0 0 1 5 force
 particle lava ~-3 ~1 ~ 0 0 0 1 5 force
 particle lava ~3 ~1 ~ 0 0 0 1 5 force
 
-playsound item.firecharge.use master @a[distance=0..10,tag=!VSNearby]
+playsound item.firecharge.use master @a[distance=0..15]
 
-tag @a[distance=0..10,tag=!VSNearby] add VSNearby
+tag @s add VSNearby
 
