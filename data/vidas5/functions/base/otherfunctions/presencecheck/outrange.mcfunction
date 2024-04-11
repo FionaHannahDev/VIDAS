@@ -11,7 +11,7 @@ particle smoke ~3 ~1.5 ~ 0 0 0 0.05 5 force
 
 playsound block.fire.extinguish master @a[distance=..20]
 
-function vidas5:base/otherfunctions/configureanimations/circlesetup/end
+#function vidas5:base/otherfunctions/configureanimations/circlesetup/end
 
 tag @s remove VSNearby
 

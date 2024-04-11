@@ -2,5 +2,5 @@
 #We know crying obsidian is under foot, or that test wouldnt have been run.
 
 #Standing on fire?
-execute as @s at @s if block ~ ~ ~ fire run function vidas5:base/checks/applyflashtags
+execute as @s at @s if block ~ ~ ~ fire run function vidas5:base/checks/init/applyflashtags
 #If standing in fire, READY.

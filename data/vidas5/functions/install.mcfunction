@@ -111,8 +111,8 @@ scoreboard objectives add VSPlayerXP dummy
 scoreboard objectives add VSCryObsidPlaced minecraft.used:crying_obsidian
 #Crying Obsidian Mined
 scoreboard objectives add VSCryObsidMined minecraft.mined:crying_obsidian
-#Configure Animation Tick
-scoreboard objectives add VSLocalCGFTick dummy
+#Raytrace Tracker
+scoreboard objectives add VSDistance dummy
 
 
 
