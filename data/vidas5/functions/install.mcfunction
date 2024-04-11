@@ -40,8 +40,6 @@ scoreboard objectives add VSCTInit dummy
 
 #This is a variable. It holds the validation data for the next highest tick
 scoreboard objectives add VSCTtest dummy
-#Rotation variable for the CFG animation tick
-scoreboard objectives add VSRotate dummy
 
 #These are difference calculations based on XYZ of target nearestplayer and marker with VSCircle
 scoreboard objectives add VSX dummy
@@ -111,8 +109,15 @@ scoreboard objectives add VSPlayerXP dummy
 scoreboard objectives add VSCryObsidPlaced minecraft.used:crying_obsidian
 #Crying Obsidian Mined
 scoreboard objectives add VSCryObsidMined minecraft.mined:crying_obsidian
+
+
+#Marker Internal Vars
 #Raytrace Tracker
 scoreboard objectives add VSDistance dummy
+#Rotation variable for the animation tick
+scoreboard objectives add VSRotate dummy
+#Animation tick
+scoreboard objectives add VSAnimTick dummy
 
 
 

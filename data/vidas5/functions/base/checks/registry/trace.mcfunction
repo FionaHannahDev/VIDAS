@@ -11,6 +11,6 @@
 execute if block ~ ~ ~ crying_obsidian run function vidas5:base/checks/registry/validatecircle
 
 execute if score @s VSDistance matches 40.. run tag @s add VSFailure
-execute if entity @s[tag=VSSuccess] run function vidas5:base/checks/registry/success
+execute if entity @s[tag=VSSuccess] align xyz positioned ~0.5 ~0.5 ~0.5 run function vidas5:base/checks/registry/success
 execute if entity @s[tag=!VSSuccess] if entity @s[tag=!VSFailure] positioned ^ ^ ^0.1 run function vidas5:base/checks/registry/trace
 scoreboard players add @s VSDistance 1

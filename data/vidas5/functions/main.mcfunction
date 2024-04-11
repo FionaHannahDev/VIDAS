@@ -11,4 +11,5 @@ execute as @a if predicate cryobsdereg at @s run function vidas5:base/checks/der
 #Run circle marker presence checker
 execute as @e[type=marker,tag=VSCircle,tag=VSCore] at @s run function vidas5:base/otherfunctions/presencecheck/check
 
-#Run Circle config animation checks
+#Run Circle config animation manager if theres a VSCore marker with an animtick score
+execute as @e[tag=VSCore,scores={VSAnimTick=1..}] at @s run function vidas5:animations/config/manager
